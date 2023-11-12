@@ -89,9 +89,10 @@ Rel(message_service, db, "INSERT/SELECT/UPDATE", "SQL")
 ```puml
 @startuml
 
-class User {
+class Account {
   id
   login
+  password
   first_name
   last_name
   email
@@ -121,8 +122,8 @@ class Message {
   date
 }
 
-User <- Topic
-User <- Dialogue
+Account <- Topic
+Account <- Dialogue
 Dialogue <- Message
 
 @enduml
